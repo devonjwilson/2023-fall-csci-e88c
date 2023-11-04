@@ -17,6 +17,7 @@ lazy val root = (project in file(".")).
       "-Wunused", // for scalafix
     ),
     libraryDependencies ++= Dependencies.core ++ Dependencies.scalaTest,
+    libraryDependencies += "com.twitter" %% "algebird-core" % "0.13.10",
     assembly / mainClass := Some("org.cscie88c.MainApp"),
     assembly / assemblyJarName := "2023FallScalaBigData.jar",
     assembly / test := {},
