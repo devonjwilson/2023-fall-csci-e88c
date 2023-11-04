@@ -6,11 +6,14 @@ class EmployeeTest extends StandardTest {
   "Employee" should {
  
     "have a default sort order" in {
-      // write unit tests here
+    val allEmployees = List(Employee("Scott", 23, 5000), Employee("Ong", 31, 8000), Employee("Suzah", 28, 7000))
+    println(Employee.defaultSortEmployees(allEmployees))
     }
 
     "sort employees by salary" in {
-      // write unit tests here
-    }
+      val allEmployees = List(Employee("Scott", 23, 5000), Employee("Ong", 31, 8000), Employee("Suzah", 28, 7000))
+      val testBySalary = Employee.sortEmployeesBySalary(allEmployees)
+      assert (List(Employee("Scott",23,5000), Employee("Suzah",28,7000), Employee("Ong",31,8000)) == testBySalary) 
+       }
   }
 }

@@ -19,6 +19,7 @@ lazy val root = (project in file(".")).
     Compile / run / fork := true, // cleaner to run programs in a JVM different from sbt
     run / javaOptions += "--add-exports=java.base/sun.nio.ch=ALL-UNNAMED", // needed to run Spark with Java 17
     libraryDependencies ++= Dependencies.core ++ Dependencies.scalaTest,
+    libraryDependencies += "com.twitter" %% "algebird-core" % "0.13.10",
     assembly / mainClass := Some("org.cscie88c.MainApp"),
     assembly / assemblyJarName := "2023FallScalaBigData.jar",
     assembly / test := {},

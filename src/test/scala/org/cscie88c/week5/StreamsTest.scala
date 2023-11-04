@@ -6,4 +6,12 @@ import Streams.Dog
 class StreamsTest extends StandardTest {
 
   // Bonus problem unit tests
+  //Bonus 1
+  "calling dogs" should {
+    "return correct results" in {
+      assert(Streams.dogs.take(5).size==5)
+      Streams.dogs.take(5).foreach(println)
+    }
+  }
+
 }
